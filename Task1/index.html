@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Mastery Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="floating-elements">
+        <div class="floating-circle" style="width: 80px; height: 80px; top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="floating-circle" style="width: 120px; height: 120px; top: 60%; right: 10%; animation-delay: 2s;"></div>
+        <div class="floating-circle" style="width: 60px; height: 60px; bottom: 20%; left: 20%; animation-delay: 4s;"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Web Development Mastery Hub</h1>
+            <p class="subtitle">Master HTML, CSS, and JavaScript with Interactive Examples</p>
+            
+            <div class="nav-tabs">
+                <button class="tab-btn active" onclick="showSection('html')">HTML Fundamentals</button>
+                <button class="tab-btn" onclick="showSection('css')">CSS Styling</button>
+                <button class="tab-btn" onclick="showSection('js')">JavaScript Magic</button>
+                <button class="tab-btn" onclick="showSection('interactive')">Interactive Demo</button>
+            </div>
+        </header>
+
+        <!-- HTML Section -->
+        <section id="html" class="content-section active">
+            <h2>🏗️ HTML Structure & Elements</h2>
+            <p>HTML provides the foundation and structure for web content. Here are the essential elements every developer should master:</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card" onclick="highlightCode('heading-demo')">
+                    <h3>📝 Headings & Typography</h3>
+                    <p>Semantic heading structure from H1 to H6, paragraphs, and text formatting elements.</p>
+                </div>
+                <div class="feature-card" onclick="highlightCode('image-demo')">
+                    <h3>🖼️ Images & Media</h3>
+                    <p>Responsive images, alt text for accessibility, and modern picture elements.</p>
+                </div>
+                <div class="feature-card" onclick="highlightCode('link-demo')">
+                    <h3>🔗 Navigation & Links</h3>
+                    <p>Internal and external links, navigation menus, and anchor elements.</p>
+                </div>
+                <div class="feature-card" onclick="highlightCode('form-demo')">
+                    <h3>📋 Forms & Input</h3>
+                    <p>User input collection with various form controls and validation.</p>
+                </div>
+            </div>
+
+            <div class="code-demo" id="heading-demo">
+&lt;!-- Semantic HTML Structure --&gt;
+&lt;article&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Main Article Title&lt;/h1&gt;
+        &lt;p&gt;Published on &lt;time datetime="2024-06-04"&gt;June 4, 2024&lt;/time&gt;&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;section&gt;
+        &lt;h2&gt;Section Heading&lt;/h2&gt;
+        &lt;p&gt;This is a &lt;strong&gt;paragraph&lt;/strong&gt; with &lt;em&gt;emphasis&lt;/em&gt;.&lt;/p&gt;
+        &lt;blockquote cite="https://example.com"&gt;
+            "This is an important quote from a reliable source."
+        &lt;/blockquote&gt;
+    &lt;/section&gt;
+&lt;/article&gt;
+            </div>
+
+            <div class="image-gallery">
+                <div class="gallery-item">🎨</div>
+                <div class="gallery-item">📱</div>
+                <div class="gallery-item">💻</div>
+                <div class="gallery-item">🚀</div>
+            </div>
+        </section>
+
+        <!-- CSS Section -->
+        <section id="css" class="content-section">
+            <h2>🎨 CSS Styling & Layout</h2>
+            <p>Transform plain HTML into visually stunning and responsive designs with advanced CSS techniques.</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🌈 Colors & Gradients</h3>
+                    <p>Modern color systems, gradients, and visual effects for engaging designs.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📐 Flexbox & Grid</h3>
+                    <p>Powerful layout systems for responsive and flexible page structures.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>✨ Animations & Transitions</h3>
+                    <p>Smooth transitions and keyframe animations for interactive experiences.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📱 Responsive Design</h3>
+                    <p>Media queries and flexible layouts that work on all device sizes.</p>
+                </div>
+            </div>
+
+            <div class="code-demo">
+/* Advanced CSS Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Modern Gradient Backgrounds */
+.gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    backdrop-filter: blur(10px);
+}
+
+/* Smooth Animations */
+.hover-effect {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(0);
+}
+
+.hover-effect:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+            </div>
+
+            <div class="interactive-demo">
+                <h3>🎯 Color Theme Changer</h3>
+                <p>Click the boxes below to change the page theme:</p>
+                <div class="color-changer" style="background: linear-gradient(45deg, #ff6b6b, #ee5a24);" onclick="changeTheme('warm')">Warm</div>
+                <div class="color-changer" style="background: linear-gradient(45deg, #74b9ff, #0984e3);" onclick="changeTheme('cool')">Cool</div>
+                <div class="color-changer" style="background: linear-gradient(45deg, #00b894, #00cec9);" onclick="changeTheme('nature')">Nature</div>
+                <div class="color-changer" style="background: linear-gradient(45deg, #667eea, #764ba2);" onclick="changeTheme('default')">Default</div>
+            </div>
+        </section>
+        <!-- <script src="script.js"></script> -->
+        <!-- JavaScript Section -->
+        <section id="js" class="content-section">
+            <h2>⚡ JavaScript Interactivity</h2>
+            <p>Bring your web pages to life with dynamic behavior, user interactions, and modern JavaScript features.</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🎯 Event Handling</h3>
+                    <p>Respond to user interactions like clicks, hovers, and form submissions.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔄 DOM Manipulation</h3>
+                    <p>Dynamically update page content, styles, and structure in real-time.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📡 Async Operations</h3>
+                    <p>Handle API calls, timers, and asynchronous operations smoothly.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>💾 Data Management</h3>
+                    <p>Store and manipulate data with arrays, objects, and modern ES6+ features.</p>
+                </div>
+            </div>
+
+            <div class="code-demo">
+// Modern JavaScript Examples
+class WebDevDemo {
+    constructor() {
+        this.themes = {
+            warm: ['#ff6b6b', '#ee5a24'],
+            cool: ['#74b9ff', '#0984e3'],
+            nature: ['#00b894', '#00cec9'],
+            default: ['#667eea', '#764ba2']
+        };
+    }
+
+    // Event handling with arrow functions
+    handleClick = (event) => {
+        const animations = ['bounce', 'shake', 'pulse', 'glow'];
+        const randomAnimation = animations[Math.floor(Math.random() * animations.length)];
+        event.target.classList.add(randomAnimation);
+        
+        setTimeout(() => {
+            event.target.classList.remove(randomAnimation);
+        }, 1000);
+    }
+
+    // Async data fetching simulation
+    async loadContent() {
+        try {
+            const response = await this.simulateApiCall();
+            this.updateUI(response);
+        } catch (error) {
+            console.error('Error loading content:', error);
+        }
+    }
+}
+            </div>
+
+            <div class="interactive-demo">
+                <h3>🎮 JavaScript Playground</h3>
+                <button class="demo-button" onclick="showRandomAlert()">Random Alert</button>
+                <button class="demo-button" onclick="animateProgress()">Progress Demo</button>
+                <button class="demo-button" onclick="showModal()">Open Modal</button>
+                <button class="demo-button" onclick="createParticles()">Particle Effect</button>
+                
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressBar"></div>
+                </div>
+                
+                <div class="animation-demo" id="bouncingBall"></div>
+            </div>
+        </section>
+
+        <!-- Interactive Demo Section -->
+        <section id="interactive" class="content-section">
+            <h2>🚀 Complete Interactive Experience</h2>
+            <p>Experience all three technologies working together in perfect harmony.</p>
+            
+            <div class="form-container">
+                <h3>📝 Dynamic Form Builder</h3>
+                <form id="dynamicForm" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="skill">Skill Level:</label>
+                        <select id="skill" name="skill" onchange="updateSkillInfo(this.value)">
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                            <option value="expert">Expert</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Goals:</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your web development goals..."></textarea>
+                    </div>
+                    <button type="submit" class="demo-button">Submit Application</button>
+                </form>
+                <div id="skillInfo" style="margin-top: 15px; padding: 15px; background: rgba(255,255,255,0.5); border-radius: 8px; display: none;">
+                    <strong>Skill Level Info:</strong> <span id="skillDescription"></span>
+                </div>
+            </div>
+            
+            <div class="interactive-demo">
+                <h3>🎨 Live Style Editor</h3>
+                <button class="demo-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+                <button class="demo-button" onclick="increaseAnimationSpeed()">Speed Up Animations</button>
+                <button class="demo-button" onclick="addRandomElement()">Add Random Element</button>
+                <button class="demo-button" onclick="resetStyles()">Reset All Styles</button>
+            </div>
+        </section>
+
+        <footer>
+            <p>🌟 Built with HTML5, CSS3, and ES6+ JavaScript | Demonstrating modern web development techniques</p>
+            <p>Created to showcase the power of foundational web technologies working together</p>
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h3>🎉 Congratulations!</h3>
+            <p>You've successfully triggered a JavaScript modal! This demonstrates:</p>
+            <ul style="text-align: left; margin: 20px 0;">
+                <li>✅ DOM manipulation</li>
+                <li>✅ Event handling</li>
+                <li>✅ CSS animations</li>
+                <li>✅ User interaction</li>
+            </ul>
+            <button class="demo-button" onclick="closeModal()">Close Modal</button>
+        </div>
+    </div>
+
+    
