@@ -1,1 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Mastery Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="floating-elements">
+        <div class="floating-circle" style="width: 80px; height: 80px; top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="floating-circle" style="width: 120px; height: 120px; top: 60%; right: 10%; animation-delay: 2s;"></div>
+        <div class="floating-circle" style="width: 60px; height: 60px; bottom: 20%; left: 20%; animation-delay: 4s;"></div>
+    </div>
 
+    <div class="container">
+        <header>
+            <h1>Web Development Mastery Hub</h1>
+            <p class="subtitle">Master HTML, CSS, and JavaScript with Interactive Examples</p>
+            
+            <div class="nav-tabs">
+                <button class="tab-btn active" onclick="showSection('html')">HTML Fundamentals</button>
+                <button class="tab-btn" onclick="showSection('css')">CSS Styling</button>
+                <button class="tab-btn" onclick="showSection('js')">JavaScript Magic</button>
+                <button class="tab-btn" onclick="showSection('interactive')">Interactive Demo</button>
+            </div>
+        </header>
+
+        <!-- HTML Section -->
+        <section id="html" class="content-section active">
+            <h2>🏗️ HTML Structure & Elements</h2>
+            <p>HTML provides the foundation and structure for web content. Here are the essential elements every developer should master:</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card" onclick="highlightCode('heading-demo')">
+                    <h3>📝 Headings & Typography</h3>
+                    <p>Semantic heading structure from H1 to H6, paragraphs, and text formatting elements.</p>
+                </div>
+                <div class="feature-card" onclick="highlightCode('image-demo')">
+                    <h3>🖼️ Images & Media</h3>
+                    <p>Responsive images, alt text for accessibility, and modern picture elements.</p>
+                </div>
+                <div class="feature-card" onclick="highlightCode('link-demo')">
+                    <h3>🔗 Navigation & Links</h3>
+                    <p>Internal and external links, navigation menus, and anchor elements.</p>
+                </div>
+                <div class="feature-card" onclick="highlightCode('form-demo')">
+                    <h3>📋 Forms & Input</h3>
+                    <p>User input collection with various form controls and validation.</p>
+                </div>
+            </div>
+
+            <div class="code-demo" id="heading-demo">
+&lt;!-- Semantic HTML Structure --&gt;
+&lt;article&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Main Article Title&lt;/h1&gt;
+        &lt;p&gt;Published on &lt;time datetime="2024-06-04"&gt;June 4, 2024&lt;/time&gt;&lt;/p&gt;
+    &lt;/header&gt;
+    &lt;section&gt;
+        &lt;h2&gt;Section Heading&lt;/h2&gt;
+        &lt;p&gt;This is a &lt;strong&gt;paragraph&lt;/strong&gt; with &lt;em&gt;emphasis&lt;/em&gt;.&lt;/p&gt;
+        &lt;blockquote cite="https://example.com"&gt;
+            "This is an important quote from a reliable source."
+        &lt;/blockquote&gt;
+    &lt;/section&gt;
+&lt;/article&gt;
+            </div>
+
+            <div class="image-gallery">
+                <div class="gallery-item">🎨</div>
+                <div class="gallery-item">📱</div>
+                <div class="gallery-item">💻</div>
+                <div class="gallery-item">🚀</div>
+            </div>
+        </section>
+
+        <!-- CSS Section -->
+        <section id="css" class="content-section">
+            <h2>🎨 CSS Styling & Layout</h2>
+            <p>Transform plain HTML into visually stunning and responsive designs with advanced CSS techniques.</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🌈 Colors & Gradients</h3>
+                    <p>Modern color systems, gradients, and visual effects for engaging designs.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📐 Flexbox & Grid</h3>
+                    <p>Powerful layout systems for responsive and flexible page structures.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>✨ Animations & Transitions</h3>
+                    <p>Smooth transitions and keyframe animations for interactive experiences.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📱 Responsive Design</h3>
+                    <p>Media queries and flexible layouts that work on all device sizes.</p>
+                </div>
+            </div>
+
+            <div class="code-demo">
+/* Advanced CSS Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Modern Gradient Backgrounds */
+.gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    backdrop-filter: blur(10px);
+}
+
+/* Smooth Animations */
+.hover-effect {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(0);
+}
+
+.hover-effect:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+            </div>
+
+            <div class="interactive-demo">
+                <h3>🎯 Color Theme Changer</h3>
+                <p>Click the boxes below to change the page theme:</p>
+                <div class="color-changer" style="background: linear-gradient(45deg, #ff6b6b, #ee5a24);" onclick="changeTheme('warm')">Warm</div>
+                <div class="color-changer" style="background: linear-gradient(45deg, #74b9ff, #0984e3);" onclick="changeTheme('cool')">Cool</div>
+                <div class="color-changer" style="background: linear-gradient(45deg, #00b894, #00cec9);" onclick="changeTheme('nature')">Nature</div>
+                <div class="color-changer" style="background: linear-gradient(45deg, #667eea, #764ba2);" onclick="changeTheme('default')">Default</div>
+            </div>
+        </section>
+        <script src="script.js"></script> 
+        <!-- JavaScript Section -->
+        <section id="js" class="content-section">
+            <h2>⚡ JavaScript Interactivity</h2>
+            <p>Bring your web pages to life with dynamic behavior, user interactions, and modern JavaScript features.</p>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>🎯 Event Handling</h3>
+                    <p>Respond to user interactions like clicks, hovers, and form submissions.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔄 DOM Manipulation</h3>
+                    <p>Dynamically update page content, styles, and structure in real-time.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📡 Async Operations</h3>
+                    <p>Handle API calls, timers, and asynchronous operations smoothly.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>💾 Data Management</h3>
+                    <p>Store and manipulate data with arrays, objects, and modern ES6+ features.</p>
+                </div>
+            </div>
+
+            <div class="code-demo">
+// Modern JavaScript Examples
+class WebDevDemo {
+    constructor() {
+        this.themes = {
+            warm: ['#ff6b6b', '#ee5a24'],
+            cool: ['#74b9ff', '#0984e3'],
+            nature: ['#00b894', '#00cec9'],
+            default: ['#667eea', '#764ba2']
+        };
+    }
+
+    // Event handling with arrow functions
+    handleClick = (event) => {
+        const animations = ['bounce', 'shake', 'pulse', 'glow'];
+        const randomAnimation = animations[Math.floor(Math.random() * animations.length)];
+        event.target.classList.add(randomAnimation);
+        
+        setTimeout(() => {
+            event.target.classList.remove(randomAnimation);
+        }, 1000);
+    }
+
+    // Async data fetching simulation
+    async loadContent() {
+        try {
+            const response = await this.simulateApiCall();
+            this.updateUI(response);
+        } catch (error) {
+            console.error('Error loading content:', error);
+        }
+    }
+}
+            </div>
+
+            <div class="interactive-demo">
+                <h3>🎮 JavaScript Playground</h3>
+                <button class="demo-button" onclick="showRandomAlert()">Random Alert</button>
+                <button class="demo-button" onclick="animateProgress()">Progress Demo</button>
+                <button class="demo-button" onclick="showModal()">Open Modal</button>
+                <button class="demo-button" onclick="createParticles()">Particle Effect</button>
+                
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressBar"></div>
+                </div>
+                
+                <div class="animation-demo" id="bouncingBall"></div>
+            </div>
+        </section>
+
+        <!-- Interactive Demo Section -->
+        <section id="interactive" class="content-section">
+            <h2>🚀 Complete Interactive Experience</h2>
+            <p>Experience all three technologies working together in perfect harmony.</p>
+            
+            <!-- Replace the existing form-container section in your Interactive Demo Section with this: -->
+
+<div class="form-container">
+    <h3>📝 Enhanced Registration Form</h3>
+    <form id="dynamicForm" onsubmit="handleFormSubmit(event)" novalidate>
+        <!-- Personal Information -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" required>
+                <span class="error-message" id="firstName-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" required>
+                <span class="error-message" id="lastName-error"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" required>
+            <span class="error-message" id="email-error"></span>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required>
+                <span class="error-message" id="phone-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="dateOfBirth">Date of Birth *</label>
+                <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                <span class="error-message" id="dateOfBirth-error"></span>
+            </div>
+        </div>
+
+        <!-- Address Information -->
+        <div class="form-group">
+            <label for="address">Street Address *</label>
+            <input type="text" id="address" name="address" required>
+            <span class="error-message" id="address-error"></span>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="city">City *</label>
+                <input type="text" id="city" name="city" required>
+                <span class="error-message" id="city-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="zipCode">ZIP Code *</label>
+                <input type="text" id="zipCode" name="zipCode" required>
+                <span class="error-message" id="zipCode-error"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="country">Country *</label>
+            <select id="country" name="country" required>
+                <option value="">Select a country</option>
+                <option value="us">United States</option>
+                <option value="ca">Canada</option>
+                <option value="uk">United Kingdom</option>
+                <option value="au">Australia</option>
+                <option value="de">Germany</option>
+                <option value="fr">France</option>
+                <option value="in">India</option>
+                <option value="jp">Japan</option>
+                <option value="other">Other</option>
+            </select>
+            <span class="error-message" id="country-error"></span>
+        </div>
+
+        <!-- Account Information -->
+        <div class="form-group">
+            <label for="username">Username *</label>
+            <input type="text" id="username" name="username" required>
+            <span class="error-message" id="username-error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password *</label>
+            <input type="password" id="password" name="password" required>
+            <div class="password-strength">
+                <div class="password-strength-bar" id="passwordStrengthBar"></div>
+            </div>
+            <div class="password-requirements">
+                <div class="requirement" id="length-req">
+                    <span class="icon"></span>
+                    At least 8 characters
+                </div>
+                <div class="requirement" id="uppercase-req">
+                    <span class="icon"></span>
+                    One uppercase letter
+                </div>
+                <div class="requirement" id="lowercase-req">
+                    <span class="icon"></span>
+                    One lowercase letter
+                </div>
+                <div class="requirement" id="number-req">
+                    <span class="icon"></span>
+                    One number
+                </div>
+                <div class="requirement" id="special-req">
+                    <span class="icon"></span>
+                    One special character
+                </div>
+            </div>
+            <span class="error-message" id="password-error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password *</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <span class="error-message" id="confirmPassword-error"></span>
+        </div>
+
+        <!-- Preferences -->
+        <div class="form-group">
+            <label for="skill">Skill Level</label>
+            <select id="skill" name="skill" onchange="updateSkillInfo(this.value)">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+                <option value="expert">Expert</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Preferred Programming Languages</label>
+            <div class="checkbox-group">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="javascript" name="languages" value="javascript">
+                    <label for="javascript">JavaScript</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="python" name="languages" value="python">
+                    <label for="python">Python</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="java" name="languages" value="java">
+                    <label for="java">Java</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="csharp" name="languages" value="csharp">
+                    <label for="csharp">C#</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="php" name="languages" value="php">
+                    <label for="php">PHP</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Preferred Contact Method</label>
+            <div class="radio-group">
+                <div class="radio-item">
+                    <input type="radio" id="contact-email" name="contactMethod" value="email" checked>
+                    <label for="contact-email">Email</label>
+                </div>
+                <div class="radio-item">
+                    <input type="radio" id="contact-phone" name="contactMethod" value="phone">
+                    <label for="contact-phone">Phone</label>
+                </div>
+                <div class="radio-item">
+                    <input type="radio" id="contact-sms" name="contactMethod" value="sms">
+                    <label for="contact-sms">SMS</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="website">Personal Website (optional)</label>
+            <input type="url" id="website" name="website" placeholder="https://example.com">
+            <span class="error-message" id="website-error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Your Goals:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us about your web development goals..."></textarea>
+            <span class="error-message" id="message-error"></span>
+        </div>
+
+        <div class="form-group">
+            <div class="checkbox-item">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the Terms of Service and Privacy Policy *</label>
+            </div>
+            <span class="error-message" id="terms-error"></span>
+        </div>
+
+        <div class="form-group">
+            <div class="checkbox-item">
+                <input type="checkbox" id="newsletter" name="newsletter">
+                <label for="newsletter">Subscribe to our newsletter for updates and tips</label>
+            </div>
+        </div>
+
+        <button type="submit" class="demo-button">Submit Application</button>
+    </form>
+    <div id="skillInfo" style="margin-top: 15px; padding: 15px; background: rgba(255,255,255,0.5); border-radius: 8px; display: none;">
+        <strong>Skill Level Info:</strong> <span id="skillDescription"></span>
+    </div>
+</div>
+
+<div class="todo-container">
+    <h3>🧾 To-Do List</h3>
+    <div class="todo-input">
+        <input type="text" id="todoInput" placeholder="Add a new task..." />
+        <button onclick="addTodo()">Add</button>
+    </div>
+    <ul id="todoList" class="todo-list"></ul>
+</div>
+        </section>
